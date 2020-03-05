@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main
+{  
+  static void squareCube(long x) 
+  { 
+    int i=1; 
+    int y=0;
+    while ((int)(Math.pow(i,6))<=x) 
+    { 
+      y=(int)(Math.pow(i,6)); 
+      ++i; 
+    } 
+  System.out.println(y);
+  } 
+  public static void main(String []args) 
+  { 
+    Scanner sc=new Scanner(System.in);
+    long N=sc.nextLong();  
+    squareCube(N); 
+  } 
+}
