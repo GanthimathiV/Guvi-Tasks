@@ -1,0 +1,23 @@
+from itertools import permutations 
+s,p,k=map(int,input().split())
+L,q=[],0
+for i in range(1,p+1):
+    if p%i==0 and i<=s:
+        j=0
+        while j<k:
+            L+=[i]
+            j+=1
+perm = permutations(L,k)
+for qwe in list(perm):
+    s_exp=0
+    p_exp=1
+    for ele_1 in qwe:
+        s_exp+=ele_1
+        p_exp*=ele_1
+    if s_exp==s and p_exp==p:
+        q+=1
+        for ele in qwe:
+            print(ele,end=" ")
+        break    
+if q==0:
+    print("NO")
